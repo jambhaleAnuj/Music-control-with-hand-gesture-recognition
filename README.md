@@ -66,4 +66,8 @@ https://www.geeksforgeeks.org/face-and-hand-landmarks-detection-using-python-med
 **Note:**
 
 * This code requires additional files like the pre-trained gesture recognition model (`mp_hand_gesture`) and the gesture class names list (`gesture.names`).
-* Ensure you have the necessary libraries (`cv2`, `numpy`, `mediapipe`, `tensorflow.keras`, `pygame`) installed before running the script. 
+* Ensure you have the necessary libraries (`cv2`, `numpy`, `mediapipe`, `tensorflow.keras`, `pygame`) installed before running the script.
+
+* Use Python Version 3.10
+* Use TensorFlow version: 2.13.1
+* Use Keras version: 2.13.1
