@@ -1,0 +1,19 @@
+# Environments
+.venv/
+.env
+*.env
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg*
+.eggs/
+.pytest_cache/
+.mypy_cache/
+.coverage*
+
+# Allow demo GIFs in docs
+!docs/*.gif

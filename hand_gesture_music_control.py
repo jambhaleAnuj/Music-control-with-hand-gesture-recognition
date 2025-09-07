@@ -1,8 +1,12 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
 import cv2
 import numpy as np
 import mediapipe as mp
 from tensorflow.keras.models import load_model
 from pygame import mixer
+from pathlib import Path
 
 # Initialize pygame mixer for music playback control
 mixer.init()
@@ -13,14 +17,31 @@ music_playing = False  # Flag to track music playback state
 model = load_model('mp_hand_gesture')  # Load model for gesture classification
 
 # Load class names associated with gestures from a text file
-with open('gesture.names', 'r') as f:
+def find_file(name: str) -> str:
+    """Return a readable path for name by checking common locations."""
+    candidates = [
+        Path(name),
+        Path('assets') / 'audio' / name,
+        Path('assets') / 'config' / name,
+        Path('docs') / name,
+    ]
+    for p in candidates:
+        if p.exists():
+            return str(p)
+    return name  # fallback; will error later if truly missing
+
+with open(find_file('gesture.names'), 'r') as f:
     classNames = f.read().split('\n')
 print(classNames)  # Print loaded gesture class names (for debugging)
 
 # Initialize webcam capture or video stream from URL
-url = "http://x192.168.43.1:8080///video"  # Replace with webcam index (0) if using webcam
-cap = cv2.VideoCapture(url)
-cap.open(url)  # Open webcam or video stream
+# Tip: set source to 0 for default webcam, or to an IP camera URL.
+source = 0  # e.g., 0 or "http://x192.168.43.1:8080/video"
+cap = cv2.VideoCapture(source)
+if isinstance(source, str):
+    cap.open(source)
+if not cap.isOpened():
+    raise RuntimeError("Failed to open video source. Set 'source=0' for webcam or check your URL.")
 
 # Initialize MediaPipe hands object for hand detection
 mpHands = mp.solutions.hands
@@ -68,7 +89,8 @@ while True:
             # Perform music playback actions based on the detected gesture
             if className == "thumbs up" and not music_playing:
                 print("THUMB")
-                mixer.music.load("METAMORPHOSIS.mp3")  # Load the music file
+                mp3_path = find_file("METAMORPHOSIS.mp3")
+                mixer.music.load(mp3_path)  # Load the music file
                 mixer.music.play()  # Start music playback
                 music_playing = True  # Update music playback state
             elif className == "thumbs down":
@@ -89,4 +111,10 @@ while True:
     # Display the final frame with landmarks (if drawn) and prediction text
     cv2.imshow("Output", frame)
 
-    # Exit
+    # Exit when 'q' is pressed
+    if cv2.waitKey(1) & 0xFF == ord('q'):
+        break
+
+# Cleanup
+cap.release()
+cv2.destroyAllWindows()
