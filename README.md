@@ -66,7 +66,7 @@ README.md, LICENSE
 
 Python packages are pinned in `requirements.txt`:
 
-- tensorflow==2.13.1, keras==2.13.1
+- tensorflow==2.13.1 (includes tf.keras)
 - mediapipe, opencv-python, numpy, pygame
 
 ## Quick start

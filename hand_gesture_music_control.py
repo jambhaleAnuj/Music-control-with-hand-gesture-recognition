@@ -1,12 +1,13 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-import cv2
-import numpy as np
-import mediapipe as mp
-from tensorflow.keras.models import load_model
-from pygame import mixer
 from pathlib import Path
+
+import cv2
+import mediapipe as mp
+import numpy as np
+from pygame import mixer
+from tensorflow.keras.models import load_model
 
 # Initialize pygame mixer for music playback control
 mixer.init()
@@ -32,6 +33,7 @@ def find_file(name: str) -> str:
             return str(p)
     return name  # fallback; will error later if truly missing
 
+
 with open(find_file("gesture.names"), "r") as f:
     classNames = f.read().split("\n")
 print(classNames)  # Print loaded gesture class names (for debugging)
@@ -43,7 +45,9 @@ cap = cv2.VideoCapture(source)
 if isinstance(source, str):
     cap.open(source)
 if not cap.isOpened():
-    raise RuntimeError("Failed to open video source. Set 'source=0' for webcam or check your URL.")
+    raise RuntimeError(
+        "Failed to open video source. Set 'source=0' for webcam or check your URL."
+    )
 
 # Initialize MediaPipe hands object for hand detection
 mpHands = mp.solutions.hands
