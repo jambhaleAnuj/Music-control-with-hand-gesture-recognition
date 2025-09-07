@@ -14,24 +14,26 @@ mixer.music.set_volume(0.5)  # Set initial music volume (0.0 to 1.0)
 music_playing = False  # Flag to track music playback state
 
 # Load the pre-trained gesture recognition model
-model = load_model('mp_hand_gesture')  # Load model for gesture classification
+model = load_model("mp_hand_gesture")  # Load model for gesture classification
 
 # Load class names associated with gestures from a text file
+
+
 def find_file(name: str) -> str:
     """Return a readable path for name by checking common locations."""
     candidates = [
-        Path(name),
-        Path('assets') / 'audio' / name,
-        Path('assets') / 'config' / name,
-        Path('docs') / name,
+    Path(name),
+    Path("assets") / "audio" / name,
+    Path("assets") / "config" / name,
+    Path("docs") / name,
     ]
     for p in candidates:
         if p.exists():
             return str(p)
     return name  # fallback; will error later if truly missing
 
-with open(find_file('gesture.names'), 'r') as f:
-    classNames = f.read().split('\n')
+with open(find_file("gesture.names"), "r") as f:
+    classNames = f.read().split("\n")
 print(classNames)  # Print loaded gesture class names (for debugging)
 
 # Initialize webcam capture or video stream from URL
@@ -64,7 +66,7 @@ while True:
     # Process the frame using MediaPipe to detect hand landmarks
     result = hands.process(framergb)
 
-    className = ''  # Initialize variable to store predicted gesture class name
+    className = ""  # Initialize variable to store predicted gesture class name
 
     # Process the hand detection result if hands are found
     if result.multi_hand_landmarks:
@@ -100,19 +102,27 @@ while True:
             elif className == "fist" and music_playing:
                 print("ROCK")
                 mixer.music.unpause()  # Resume paused music playback
-            elif className == "stop" or className == 'live long' and music_playing:
+            elif (className == "stop" or className == "live long") and music_playing:
                 print("PALM")
                 mixer.music.pause()  # Pause music playback
 
     # Display the predicted gesture class name on the frame (optional)
-    cv2.putText(frame, className, (10, 50), cv2.FONT_HERSHEY_SIMPLEX,
-                1, (0, 0, 255), 2, cv2.LINE_AA)
+    cv2.putText(
+        frame,
+        className,
+        (10, 50),
+        cv2.FONT_HERSHEY_SIMPLEX,
+        1,
+        (0, 0, 255),
+        2,
+        cv2.LINE_AA,
+    )
 
     # Display the final frame with landmarks (if drawn) and prediction text
     cv2.imshow("Output", frame)
 
     # Exit when 'q' is pressed
-    if cv2.waitKey(1) & 0xFF == ord('q'):
+    if cv2.waitKey(1) & 0xFF == ord("q"):
         break
 
 # Cleanup
