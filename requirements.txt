@@ -6,7 +6,7 @@ pygame>=2.5.0
 
 # TensorFlow/Keras (CPU)
 tensorflow==2.13.1
-keras==2.13.1
+keras==3.10.0
 
 # Dev tooling
 black>=24.3.0
