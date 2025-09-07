@@ -23,10 +23,10 @@ model = load_model("mp_hand_gesture")  # Load model for gesture classification
 def find_file(name: str) -> str:
     """Return a readable path for name by checking common locations."""
     candidates = [
-    Path(name),
-    Path("assets") / "audio" / name,
-    Path("assets") / "config" / name,
-    Path("docs") / name,
+        Path(name),
+        Path("assets") / "audio" / name,
+        Path("assets") / "config" / name,
+        Path("docs") / name,
     ]
     for p in candidates:
         if p.exists():
