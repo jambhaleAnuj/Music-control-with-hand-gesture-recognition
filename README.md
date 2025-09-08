@@ -19,8 +19,6 @@ Keywords: hand gesture recognition, mediapipe hands, tensorflow keras, opencv py
 
 ## Demo
 
-Add a short screencast or GIF here showing gestures controlling the music.
-
 ![Demo](docs/demo.gif)
 
 ---
@@ -120,7 +118,7 @@ Contributions are welcome! Please read [CONTRIBUTING](.github/CONTRIBUTING.md) a
 
 This project is licensed under the MIT License — see `LICENSE` for details.
 
-See also: [Roadmap](docs/meta/ROADMAP.md) · [Changelog](docs/meta/CHANGELOG.md)
+See also: [Roadmap](docs/meta/ROADMAP.md) ·
 
 ## Acknowledgements & References
 

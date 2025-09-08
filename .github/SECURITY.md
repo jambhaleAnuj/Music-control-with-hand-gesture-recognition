@@ -2,7 +2,7 @@
 
 ## Supported Versions
 
-- main branch (actively maintained)
+-   main branch (actively maintained)
 
 ## Reporting a Vulnerability
 

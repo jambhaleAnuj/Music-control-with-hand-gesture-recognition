@@ -6,9 +6,9 @@ We as members, contributors, and leaders pledge to make participation in our com
 
 ## Our Standards
 
-- Use welcoming and inclusive language
-- Be respectful of differing viewpoints and experiences
-- Gracefully accept constructive criticism
+-   Use welcoming and inclusive language
+-   Be respectful of differing viewpoints and experiences
+-   Gracefully accept constructive criticism
 
 ## Enforcement
 
