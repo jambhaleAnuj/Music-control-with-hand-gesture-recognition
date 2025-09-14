@@ -3,7 +3,8 @@
 ![License](https://img.shields.io/github/license/jambhaleAnuj/Music-control-with-hand-gesture-recognition)
 ![Stars](https://img.shields.io/github/stars/jambhaleAnuj/Music-control-with-hand-gesture-recognition?style=social)
 ![Forks](https://img.shields.io/github/forks/jambhaleAnuj/Music-control-with-hand-gesture-recognition?style=social)
-![Issues](https://img.shields.io/github/issues/jambhaleAnuj/Music-control-with-hand-gesture-recognition)Rs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)
+![Issues](https://img.shields.io/github/issues/jambhaleAnuj/Music-control-with-hand-gesture-recognition)
+![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)
 ![Python](https://img.shields.io/badge/Python-3.10-blue)
 ![TensorFlow](https://img.shields.io/badge/TensorFlow-2.13-orange)
 ![MediaPipe](https://img.shields.io/badge/MediaPipe-0.10%2B-blueviolet)
@@ -49,7 +50,7 @@ assets/config/data.pickle       # (Optional) Training data artifact if you have 
 
 Python packages are pinned in `requirements.txt`:
 
--   tensorflow==2.13.1, keras==2.13.1
+-   tensorflow==2.13.1 (includes tf.keras)
 -   mediapipe, opencv-python, numpy, pygame
 
 ## Quick start
