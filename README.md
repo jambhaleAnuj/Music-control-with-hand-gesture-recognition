@@ -3,8 +3,7 @@
 ![License](https://img.shields.io/github/license/jambhaleAnuj/Music-control-with-hand-gesture-recognition)
 ![Stars](https://img.shields.io/github/stars/jambhaleAnuj/Music-control-with-hand-gesture-recognition?style=social)
 ![Forks](https://img.shields.io/github/forks/jambhaleAnuj/Music-control-with-hand-gesture-recognition?style=social)
-![Issues](https://img.shields.io/github/issues/jambhaleAnuj/Music-control-with-hand-gesture-recognition)
-![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)
+![Issues](https://img.shields.io/github/issues/jambhaleAnuj/Music-control-with-hand-gesture-recognition)Rs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)
 ![Python](https://img.shields.io/badge/Python-3.10-blue)
 ![TensorFlow](https://img.shields.io/badge/TensorFlow-2.13-orange)
 ![MediaPipe](https://img.shields.io/badge/MediaPipe-0.10%2B-blueviolet)
@@ -118,9 +117,7 @@ Contributions are welcome! Please read [CONTRIBUTING](.github/CONTRIBUTING.md) a
 
 This project is licensed under the MIT License — see `LICENSE` for details.
 
-See also: [Roadmap](docs/meta/ROADMAP.md) ·
-
-## Acknowledgements & References
+See also: [Roadmap](docs/meta/ROADMAP.md) · [Cha# Acknowledgements & References
 
 -   [MediaPipe Hands](https://developers.google.com/mediapipe/solutions/vision/hands)
 -   [MediaPipe Gesture Recognizer](https://developers.google.com/mediapipe/solutions/vision/gesture_recognizer)

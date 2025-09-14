@@ -10,6 +10,6 @@ Thanks for considering contributing! Please follow these quick steps:
 
 ## Development tips
 
-- Keep commits small and focused.
-- Update README/docs when changing behavior.
-- Add links to related issues or discussions.
+-   Keep commits small and focused.
+-   Update README/docs when changing behavior.
+-   Add links to related issues or discussions.
