@@ -1,10 +1,34 @@
 version: 2
 updates:
+    # Keep pip ecosystem disabled for routine version bumps to avoid breaking
+    # the ML stack (TensorFlow / MediaPipe). Set to security-only via allow/ignore.
     - package-ecosystem: "pip"
       directory: "/"
       schedule:
-          interval: "monthly"
+          interval: "monthly" # Interval still required, but all updates ignored except security.
+      # Ignore all version updates; Dependabot will still raise security alerts separately.
+      ignore:
+          - dependency-name: "*"
+            update-types:
+                [
+                    "version-update:semver-major",
+                    "version-update:semver-minor",
+                    "version-update:semver-patch",
+                ]
+      # Optionally uncomment to allow only specific libs in future:
+      # allow:
+      #   - dependency-type: "direct"
+
+    # Keep GitHub Actions updated (low risk) but at a gentle cadence.
     - package-ecosystem: "github-actions"
       directory: "/"
       schedule:
-          interval: "monthly"
+          interval: "weekly"
+      open-pull-requests-limit: 2
+      groups:
+          actions-minor:
+              patterns:
+                  - "actions/*"
+          codeql:
+              patterns:
+                  - "github/codeql-action*"
