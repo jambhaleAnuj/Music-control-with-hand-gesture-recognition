@@ -8,6 +8,7 @@
 ![Python](https://img.shields.io/badge/Python-3.10-blue)
 ![TensorFlow](https://img.shields.io/badge/TensorFlow-2.13-orange)
 ![MediaPipe](https://img.shields.io/badge/MediaPipe-0.10%2B-blueviolet)
+[![Medium](https://img.shields.io/badge/Medium-Article-black?logo=medium)](https://medium.com/@jambhaleanuj/control-music-with-hand-gestures-in-real-time-mediapipe-tensorflow-opencv-python-85c3e5a44e47)
 [![CI](https://github.com/jambhaleAnuj/Music-control-with-hand-gesture-recognition/actions/workflows/ci.yml/badge.svg)](https://github.com/jambhaleAnuj/Music-control-with-hand-gesture-recognition/actions/workflows/ci.yml)
 [![CodeQL](https://github.com/jambhaleAnuj/Music-control-with-hand-gesture-recognition/actions/workflows/codeql.yml/badge.svg)](https://github.com/jambhaleAnuj/Music-control-with-hand-gesture-recognition/actions/workflows/codeql.yml)
 
@@ -30,6 +31,14 @@ Keywords: hand gesture recognition, mediapipe hands, tensorflow keras, opencv py
 -   OpenCV-based webcam capture
 -   Hands-free music control via pygame.mixer
 -   Simple, single-file script that’s easy to extend
+
+## Full Tutorial Article
+
+An in-depth build + architecture write-up is available on Medium:  
+➡️ **"Control Music with Hand Gestures in Real Time (MediaPipe + TensorFlow + OpenCV + Python)"**  
+[Read the article](https://medium.com/@jambhaleanuj/control-music-with-hand-gestures-in-real-time-mediapipe-tensorflow-opencv-python-85c3e5a44e47)
+
+The article covers: model structure, feature representation options, performance tips, extensibility patterns, Docker notes, and SEO considerations.
 
 ## Project structure
 
@@ -118,7 +127,9 @@ Contributions are welcome! Please read [CONTRIBUTING](.github/CONTRIBUTING.md) a
 
 This project is licensed under the MIT License — see `LICENSE` for details.
 
-See also: [Roadmap](docs/meta/ROADMAP.md) · [Cha# Acknowledgements & References
+See also: [Roadmap](docs/meta/ROADMAP.md) · [Changelog](docs/meta/CHANGELOG.md)
+
+## Acknowledgements & References
 
 -   [MediaPipe Hands](https://developers.google.com/mediapipe/solutions/vision/hands)
 -   [MediaPipe Gesture Recognizer](https://developers.google.com/mediapipe/solutions/vision/gesture_recognizer)
